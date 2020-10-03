@@ -1,0 +1,24 @@
+
+.fullCard {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 400px;
+    background-color: #F8F5E9;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.cardContent {
+    padding: 20px;
+    font-family: 'Piazzolla', serif;
+}
+h4{
+    font-size: 20px;
+}
+
+p {
+    text-align: justify;
+}
+#numberpage {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .name {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #0A9EE6;
+        }
+
+    </style>
+
+</head>
+
+    <body>
+        <ul th:fragment="header" >
+            <li><a th:href="@{/art/page/0}">Home</a></li>
+            <li><a th:href="@{/updateUser}">User Page</a></li>
+            <li class="name" th:text="${ 'Logged user  ' +  #request.userPrincipal.principal.firstName
+            + '  '+ #request.userPrincipal.principal.lastName}"></li>
+            <li style="float:right"><a class="active" th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/forms.css" />
+    <head lang="en" th:replace="snippets/header :: header"> </head>
+</head>
+<body>
+    <div th:include="snippets/header::head"></div>
+
+    <h1>User Page</h1>
+
+    <div class="container">
+        <form th:object="${newUser}" th:action="@{/updateUser/{id}(id=${newUser.getId()})}" method="post">
+
+            <label for="firstname">First Name</label>
+            <input type="text" th:field="*{firstName}" id="firstname" name="firstname" placeholder="First name"
+                   required>
+
+            <label for="inputEmail">Email address</label>
+            <input type="email" th:field="*{email}" id="inputEmail"  name="inputEmail" placeholder="Email address"
+                   required>
+
+            <label for="inputPassword">Password</label>
+            <input type="password" th:field="*{password}" id="inputPassword" name="inputPassword" placeholder="Password"
+                   required>
+
+                <button type="submit">Update</button>
+
+        </form>
+            <a th:href="@{/art}">
+                <button>Create Article</button>
+            </a>
+    </div>
+</body>
+</html>
