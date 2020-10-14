@@ -26,12 +26,12 @@
             <input type="password" th:field="*{password}" id="inputPassword" name="inputPassword" placeholder="Password"
                    required>
 
-                <button type="submit">Update</button>
+                <input type="submit" value="Update">
 
         </form>
-            <a th:href="@{/art}">
-                <button>Create Article</button>
-            </a>
+		<a th:href="@{/art}">
+            <input type="submit" value="Create Article">
+        </a>
     </div>
 </body>
 </html>
