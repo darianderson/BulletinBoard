@@ -26,4 +26,5 @@ public class Article {
         this.text = text;
         this.author = author;
     }
+
 }

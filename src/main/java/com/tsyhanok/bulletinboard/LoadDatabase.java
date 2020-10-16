@@ -28,7 +28,7 @@ public class LoadDatabase {
             log.info("Preloading " + repository.save(new Article("Lorem Ipsum", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
                     + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ","daria@mail.com")));
 
-//            log.info("Preloading " + repository.save(new Article("Tiger", "Content of tiger article.", "daria@mail.com")));
+            log.info("Preloading " + repository.save(new Article("Tiger", "Content of tiger article.", "daria@mail.com")));
 //
 //            log.info("Preloading " + repository.save(new Article("Title", "Content of article.", "daria@mail.com")));
 //            log.info("Preloading " + repository.save(new Article("Tiger", "Content of tiger article.", "daria@mail.com")));

@@ -21,6 +21,14 @@
         </div>
     </div>
 
+    <div class="fullCard" th:each="article: ${searchResult}">
+        <div class="cardContent" >
+            <h4 th:text="${article.title}"></h4>
+            <p th:text="${article.text}"></p>
+            <h5 th:text="${article.author}"></h5>
+        </div>
+    </div>
+
     <span th:if="${numberOfPages!= null && numberOfPages!= 0} ">
         <span id="numberpage" th:each="i: ${#numbers.sequence(0, numberOfPages - 1)}">
             <a style="text-decoration: none" th:href="@{/art/page/{no}(no=${i})}" th:text="${i}"></a>
