@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="fullCard" th:each="article: ${searchResult}">
+    <div class="fullCard" th:each="article: ${search}">
         <div class="cardContent" >
             <h4 th:text="${article.title}"></h4>
             <p th:text="${article.text}"></p>
