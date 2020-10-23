@@ -2,8 +2,10 @@ input[type=text], input[type=password],input[type=email] {
     padding: 12px 14px;
     margin: 8px 0;
     display: block;
-    border: 1px solid #ccc;
     box-sizing: border-box;
+    border: 0;
+    width: 100%;
+    border-bottom: 1.5px solid #171717;
 }
 input[type=submit]{
     border: none;
@@ -15,6 +17,11 @@ input[type=submit]{
     font-size: 15px;
     margin-top: 10px;
 }
+
+input:focus {
+    outline:none;
+}
+
 button:hover {
     opacity: 0.8;
 }
@@ -43,7 +50,5 @@ textarea {
     resize: none;
 }
 
-h1{
-    padding: 10px 120px;
-}
+
 

@@ -7,19 +7,20 @@
     <head lang="en" th:replace="snippets/header :: header"> </head>
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/bulletin.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
 </head>
 <body>
 <div th:include="snippets/header::head"></div>
 
-    <h1 style="padding:10px 120px;">Bulletin Board</h1>
+    <h1>Bulletin Board</h1>
 
     <div class="fullCard" th:each="article: ${articles}">
-        <div class="cardContent" >
-            <h4 th:text="${article.title}"></h4>
-            <p th:text="${article.text}"></p>
-            <h5 th:text="${article.author}"></h5>
-        </div>
+    <div class="cardContent" >
+        <h4 th:text="${article.title}"></h4>
+        <p th:text="${article.text}"></p>
+        <h5 th:text="${article.author}"></h5>
     </div>
+</div>
 
     <div class="fullCard" th:each="article: ${search}">
         <div class="cardContent" >
