@@ -8,10 +8,10 @@ input[type=text], input[type=password],input[type=email] {
     border-bottom: 1.5px solid #171717;
 }
 input[type=submit]{
-    border: none;
-    text-align: center;
-    background-color: #0A9EE6;
-    color: white;
+    /*border: none;*/
+    /*text-align: center;*/
+    /*background-color: #0A9EE6;*/
+    /*color: white;*/
     padding: 15px;
     width: 200px;
     font-size: 15px;

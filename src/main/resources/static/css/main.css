@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Piazzolla:wght@500&display=swap');
+
+body {
+    font-family: 'Piazzolla', serif;
+}
 
 h1{
     padding: 10px 120px;
+    font-family: 'Raleway', sans-serif;
 }
