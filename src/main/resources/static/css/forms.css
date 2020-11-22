@@ -12,6 +12,10 @@ input[type=submit]{
     /*text-align: center;*/
     /*background-color: #0A9EE6;*/
     /*color: white;*/
+
+    border: none;
+    background-color: #D2B340;
+    color: white;
     padding: 15px;
     width: 200px;
     font-size: 15px;
@@ -29,7 +33,7 @@ button:hover {
 button {
     border: none;
     cursor: pointer;
-    background-color: #0A9EE6;
+    background-color: #D2B340;
     color: white;
     padding: 15px 70px;
     margin: 15px auto;
@@ -49,6 +53,7 @@ textarea {
     background-color: #f8f8f8;
     resize: none;
 }
+
 
 
 

@@ -28,6 +28,8 @@ public class Article {
     @Field
     private String author;
 
+    private String picture;
+
     public Article(String title, String text, String author) {
         this.title = title;
         this.text = text;

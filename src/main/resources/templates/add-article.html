@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Create Article</h1>
-<form th:object="${articleModel}" th:action="@{/art}" method="post">
+<form th:object="${articleModel}" th:action="@{/art}" method="post" enctype="multipart/form-data">
 
     <div class="container">
         <label for="title">Title</label>
@@ -19,6 +19,12 @@
         <textarea th:field="*{text}" id="text"  placeholder="Text"
                required></textarea>
 
+        <label for="image">Image</label>
+        <input type="file" accept="image/jpeg" name="file" id="image"/><br/><br/>
+
+        <div th:if="${message}">
+            <h2 th:text="${message}"/>
+        </div>
         <input type="submit" value="Add Article">
     </div>
 </form>

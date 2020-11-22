@@ -13,6 +13,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    private String[] staticResources  =  {
+            "/css/**",
+            "/img/**"
+    };
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -21,9 +26,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
-        .antMatchers("/css/**").permitAll()
-        .antMatchers("/h2-console/**").permitAll()
-        .antMatchers("/signup").permitAll()
+            .antMatchers(staticResources).permitAll()
+            .antMatchers("/h2-console/**").permitAll()
+            .antMatchers("/signup").permitAll()
 
         .anyRequest().authenticated()
                 .and()
